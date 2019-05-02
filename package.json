@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "jun hui's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w dist/scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "Lean",
+    "Jun",
+    "Hui"
+  ],
+  "author": "Lean Jun Hui",
+  "license": "MIT"
+}
