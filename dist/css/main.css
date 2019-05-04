@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Raleway:200,400,700");
 .menuBtn {
   position: fixed;
   top: 2rem;
@@ -27,7 +27,7 @@
 
 .menu {
   clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
-  background-color: rgba(17, 17, 17, 0.8);
+  background-color: rgba(17, 17, 17, 0.6);
   position: absolute;
   top: 0;
   right: 0;
@@ -51,10 +51,13 @@
       transition: all 0.5s ease-out; }
       .menu ul li.show {
         transform: translate3d(0, 0, 0); }
+      .menu ul li .current > a {
+        color: #5e5e5e; }
       .menu ul li a {
         text-decoration: none;
         color: #fff;
-        font-size: 3rem; }
+        font-size: 3rem;
+        font-weight: 200; }
         .menu ul li a:hover {
           color: #5fb3ce;
           transition: all 0.5s ease-out; }
@@ -89,7 +92,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Raleway";
-  overflow: hidden; }
+  overflow-x: hidden; }
   body:after {
     content: "";
     background-color: #444;
@@ -98,7 +101,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.8; }
+    opacity: 0.6; }
+  body.home {
+    overflow: hidden; }
   body .logo {
     position: absolute;
     top: 0;
@@ -108,7 +113,7 @@ body {
       height: 8rem; }
 
 main {
-  height: 100%;
+  height: calc(100% - 2rem);
   width: 100%; }
   main.index {
     display: flex;
@@ -117,21 +122,28 @@ main {
     justify-content: center;
     align-items: flex-start; }
   main h1 {
-    font-size: 12rem; }
+    font-size: 6rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 3rem 0 0 0; }
+    main h1 span {
+      color: lightblue;
+      text-decoration: underline; }
+      main h1 span.markup {
+        color: lightgreen; }
     main h1.title {
+      font-size: 12rem;
       margin: 3rem 0;
       padding: 0 4rem;
       color: lightblue; }
-      main h1.title span {
-        color: lightblue; }
-        main h1.title span.markup {
-          color: lightgreen; }
   main h2 {
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    font-size: 6rem;
-    font-weight: 600; }
+    font-size: 3rem;
+    font-weight: 500; }
     main h2.name {
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      font-size: 6rem;
+      font-weight: 600;
       margin: 3rem 0 0 0;
       padding: 0 4rem;
       transition: all 0.5s ease-out;
@@ -142,6 +154,11 @@ main {
         font-weight: 600; }
     main h2.load {
       transform: translate3d(0, 0, 0); }
+    main h2.subTitle {
+      color: lightblue;
+      position: absolute;
+      bottom: 30rem;
+      left: 44vw; }
   main h3 {
     text-transform: uppercase;
     font-family: "Montserrat";
@@ -162,13 +179,25 @@ main {
     font-size: 3rem;
     padding: 0 4rem;
     transition: all 0.5s ease-out;
-    transform: translate3d(-100%, 0, 0); }
+    transform: translate3d(-100%, 0, 0);
+    cursor: pointer; }
     main .icons div {
       display: inline-block; }
       main .icons div span:hover {
         color: #86c5da;
         transition: all 0.5s ease-out; }
     main .icons.load {
+      transform: translate3d(0, 0, 0); }
+  main .contactInfo {
+    background-color: rgba(68, 68, 68, 0.8);
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    transform: translate3d(-100%, 0, 0);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.5s ease-out; }
+    main .contactInfo.show {
       transform: translate3d(0, 0, 0); }
 
 .index > :nth-child(2) {
@@ -179,3 +208,47 @@ main {
 
 .index > :nth-child(4) {
   transition-delay: 0.8s; }
+
+.projectPage {
+  margin: auto;
+  text-align: center;
+  width: 75%; }
+
+.projectContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding-top: 10rem; }
+  .projectContainer .projectItems {
+    display: inline-block; }
+    .projectContainer .projectItems img {
+      width: 100%;
+      border: 4px #fff solid;
+      transition: all 0.5s ease-out; }
+      .projectContainer .projectItems img:hover {
+        border: 3px #86c5da solid;
+        opacity: 0.9; }
+    .projectContainer .projectItems .projectInfo {
+      background-color: #444;
+      transition: all 0.5s ease-out;
+      height: 2rem;
+      text-align: start;
+      padding: 7px;
+      cursor: pointer; }
+      .projectContainer .projectItems .projectInfo a {
+        color: #fff;
+        text-decoration: none; }
+      .projectContainer .projectItems .projectInfo span {
+        color: #fff; }
+      .projectContainer .projectItems .projectInfo:hover {
+        background-color: #86c5da; }
+        .projectContainer .projectItems .projectInfo:hover a {
+          color: #000; }
+        .projectContainer .projectItems .projectInfo:hover span {
+          color: #000; }
+
+#main-footer {
+  background-color: rgba(68, 68, 68, 0.8);
+  text-align: center;
+  height: 2rem;
+  padding-top: 0.5rem; }

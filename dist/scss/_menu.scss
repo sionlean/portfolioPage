@@ -66,10 +66,15 @@
         transform: translate3d(0, 0, 0);
       }
 
+      .current > a {
+        color: lighten($secondary-color, 10);
+      }
+
       a {
         text-decoration: none;
         color: $primary-color;
         font-size: 3rem;
+        font-weight: 200;
 
         &:hover {
           color: darken($accent-color, 20);

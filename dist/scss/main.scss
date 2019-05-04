@@ -19,7 +19,10 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Raleway";
-  overflow: hidden;
+  overflow-x: hidden;
+  &.home {
+    overflow: hidden;
+  }
 
   .logo {
     position: absolute;
@@ -33,36 +36,44 @@ body {
 }
 
 main {
-  height: 100%;
+  height: calc(100% - 2rem);
   width: 100%;
   &.index {
     @include flexColCtr;
     align-items: flex-start;
   }
   h1 {
-    font-size: 12rem;
+    // background-color: rgba(lighten($secondary-color, 5), 0.5);
+    font-size: 6rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 3rem 0 0 0;
+
+    span {
+      color: $accent-color;
+      text-decoration: underline;
+
+      &.markup {
+        color: $contrast-color;
+      }
+    }
 
     &.title {
+      font-size: 12rem;
       margin: 3rem 0;
       padding: 0 4rem;
       color: $accent-color;
-      span {
-        color: $accent-color;
-
-        &.markup {
-          color: $contrast-color;
-        }
-      }
     }
   }
 
   h2 {
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    font-size: 6rem;
-    font-weight: 600;
-
+    font-size: 3rem;
+    font-weight: 500;
     &.name {
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      font-size: 6rem;
+      font-weight: 600;
       margin: 3rem 0 0 0;
       padding: 0 4rem;
       @include easeOut;
@@ -76,6 +87,13 @@ main {
     }
     &.load {
       transform: translate3d(0, 0, 0);
+    }
+
+    &.subTitle {
+      color: $accent-color;
+      position: absolute;
+      bottom: 30rem;
+      left: 44vw;
     }
   }
 
@@ -107,6 +125,7 @@ main {
     padding: 0 4rem;
     @include easeOut;
     transform: translate3d(-100%, 0, 0);
+    cursor: pointer;
 
     div {
       display: inline-block;
@@ -122,10 +141,86 @@ main {
       transform: translate3d(0, 0, 0);
     }
   }
+
+  .contactInfo {
+    background-color: rgba($secondary-color, $background-opacity + 0.2);
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    transform: translate3d(-100%, 0, 0);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.2rem;
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
 
 @for $x from 2 through 4 {
   .index > :nth-child(#{$x}) {
     transition-delay: $x * 0.2s;
   }
+}
+
+.projectPage {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+.projectContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding-top: 10rem;
+
+  .projectItems {
+    display: inline-block;
+    img {
+      width: 100%;
+      border: 4px $primary-color solid;
+      @include easeOut;
+
+      &:hover {
+        border: 3px darken($accent-color, 10) solid;
+        opacity: 0.9;
+      }
+    }
+
+    .projectInfo {
+      background-color: $secondary-color;
+      @include easeOut;
+      height: 2rem;
+      text-align: start;
+      padding: 7px;
+      cursor: pointer;
+
+      a {
+        color: set-text-color($secondary-color);
+        text-decoration: none;
+      }
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+
+      &:hover {
+        background-color: darken($accent-color, 10);
+        a {
+          color: set-text-color(darken($accent-color, 10));
+        }
+        span {
+          color: set-text-color(darken($accent-color, 10));
+        }
+      }
+    }
+  }
+}
+
+#main-footer {
+  background-color: rgba($secondary-color, $background-opacity + 0.2);
+  text-align: center;
+  height: 2rem;
+  padding-top: 0.5rem;
 }

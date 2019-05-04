@@ -23,6 +23,7 @@ function show() {
   }
 }
 
+//Onload homepage animation
 window.onload = function() {
   const name = document.getElementsByClassName("name");
   const role = document.getElementsByClassName("role");
@@ -31,10 +32,25 @@ window.onload = function() {
   let markup = document.getElementsByClassName("title");
 
   for (let i = 0; i < text.length; i++) {
-    setTimeout(() => (markup[0].innerHTML += text[i]), i * 90);
+    setTimeout(() => (markup[0].innerHTML += text[i]), i * 150);
   }
 
   setTimeout(() => name[0].classList.add("load"), 90);
   setTimeout(() => role[0].classList.add("load"), 180);
   setTimeout(() => icons[0].classList.add("load"), 270);
 };
+
+//Email button
+
+let email = document.getElementsByClassName("email");
+let emailInfo = document.getElementsByClassName("contactInfo");
+let emailState = false;
+email[0].addEventListener("click", function() {
+  if (!emailState) {
+    emailInfo[0].classList.add("show");
+    emailState = true;
+  } else {
+    emailInfo[0].classList.remove("show");
+    emailState = false;
+  }
+});
