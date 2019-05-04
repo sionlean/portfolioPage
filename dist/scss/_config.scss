@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+
+$primary-color: #fff;
+$secondary-color: #444;
+$accent-color: lightblue;
+$contrast-color: lightgreen;
+$home-image: url(../../img/background.jpg);
+$background-opacity: 0.8;
+
+@mixin background {
+  background: $home-image;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &:after {
+    content: "";
+    background-color: $secondary-color;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: $background-opacity;
+  }
+}
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin fullScreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin flexColCtr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+//Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return $primary-color;
+  }
+}

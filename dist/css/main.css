@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+.menuBtn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 2;
+  transition: all 0.5s ease-out; }
+  .menuBtn:hover {
+    transform: rotate(360deg); }
+  .menuBtn .lines {
+    background-color: lightblue;
+    height: 4px;
+    width: 2rem;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    transition: all 0.5s ease-out; }
+  .menuBtn.show > .lines:nth-child(1) {
+    transform: translate(0, 7px) rotate(225deg);
+    background-color: lightgreen; }
+  .menuBtn.show > .lines:nth-child(2) {
+    opacity: 0; }
+  .menuBtn.show > .lines:nth-child(3) {
+    transform: translate(0, -9px) rotate(-225deg);
+    background-color: lightgreen; }
+
+.menu {
+  clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+  background-color: rgba(17, 17, 17, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.5s ease-out; }
+  .menu.show {
+    transform: translate3d(0, 0, 0); }
+  .menu ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .menu ul li {
+      margin: 5px;
+      padding: 3rem;
+      transform: translate3d(250%, 0, 0);
+      transition: all 0.5s ease-out; }
+      .menu ul li.show {
+        transform: translate3d(0, 0, 0); }
+      .menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 3rem; }
+        .menu ul li a:hover {
+          color: #5fb3ce;
+          transition: all 0.5s ease-out; }
+
+.listItems:nth-child(1) {
+  transition-delay: 0.15s; }
+
+.listItems:nth-child(2) {
+  transition-delay: 0.3s; }
+
+.listItems:nth-child(3) {
+  transition-delay: 0.45s; }
+
+.listItems:nth-child(4) {
+  transition-delay: 0.6s; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: url(../../img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway";
+  overflow: hidden; }
+  body:after {
+    content: "";
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8; }
+  body .logo {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    body .logo img {
+      width: 8rem;
+      height: 8rem; }
+
+main {
+  height: 100%;
+  width: 100%; }
+  main.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start; }
+  main h1 {
+    font-size: 12rem; }
+    main h1.title {
+      margin: 3rem 0;
+      padding: 0 4rem;
+      color: lightblue; }
+      main h1.title span {
+        color: lightblue; }
+        main h1.title span.markup {
+          color: lightgreen; }
+  main h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 6rem;
+    font-weight: 600; }
+    main h2.name {
+      margin: 3rem 0 0 0;
+      padding: 0 4rem;
+      transition: all 0.5s ease-out;
+      transform: translate3d(-100%, 0, 0); }
+      main h2.name span {
+        color: lightblue;
+        text-decoration: underline;
+        font-weight: 600; }
+    main h2.load {
+      transform: translate3d(0, 0, 0); }
+  main h3 {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 2.5rem;
+    font-weight: 600; }
+    main h3.role {
+      margin: 1rem 0 1rem 0;
+      padding: 0 4rem;
+      transition: all 0.5s ease-out;
+      transform: translate3d(-100%, 0, 0); }
+      main h3.role span {
+        color: lightblue;
+        text-decoration: underline;
+        font-weight: 600; }
+    main h3.load {
+      transform: translate3d(0, 0, 0); }
+  main .icons {
+    font-size: 3rem;
+    padding: 0 4rem;
+    transition: all 0.5s ease-out;
+    transform: translate3d(-100%, 0, 0); }
+    main .icons div {
+      display: inline-block; }
+      main .icons div span:hover {
+        color: #86c5da;
+        transition: all 0.5s ease-out; }
+    main .icons.load {
+      transform: translate3d(0, 0, 0); }
+
+.index > :nth-child(2) {
+  transition-delay: 0.4s; }
+
+.index > :nth-child(3) {
+  transition-delay: 0.6s; }
+
+.index > :nth-child(4) {
+  transition-delay: 0.8s; }

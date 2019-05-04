@@ -1,0 +1,87 @@
+.menuBtn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 2;
+  @include easeOut;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+
+  .lines {
+    background-color: $accent-color;
+    height: 4px;
+    width: 2rem;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    @include easeOut;
+  }
+
+  &.show > .lines {
+    &:nth-child(1) {
+      transform: translate(0, 7px) rotate(225deg);
+      background-color: $contrast-color;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translate(0, -9px) rotate(-225deg);
+      background-color: $contrast-color;
+    }
+  }
+}
+
+.menu {
+  clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+  background-color: rgba(darken($secondary-color, 20), $background-opacity);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  transform: translate3d(100%, 0, 0);
+  @include easeOut;
+
+  &.show {
+    transform: translate3d(0, 0, 0);
+  }
+  ul {
+    height: 100%;
+    list-style: none;
+    @include flexColCtr;
+
+    li {
+      margin: 5px;
+      padding: 3rem;
+      transform: translate3d(250%, 0, 0);
+      @include easeOut;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 3rem;
+
+        &:hover {
+          color: darken($accent-color, 20);
+          @include easeOut;
+        }
+      }
+    }
+  }
+}
+
+@for $x from 1 through 4 {
+  .listItems:nth-child(#{$x}) {
+    transition-delay: $x * 0.15s;
+  }
+}

@@ -1,0 +1,131 @@
+@import "config";
+@import "menu";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: $primary-color;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @include background;
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway";
+  overflow: hidden;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  &.index {
+    @include flexColCtr;
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 12rem;
+
+    &.title {
+      margin: 3rem 0;
+      padding: 0 4rem;
+      color: $accent-color;
+      span {
+        color: $accent-color;
+
+        &.markup {
+          color: $contrast-color;
+        }
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 6rem;
+    font-weight: 600;
+
+    &.name {
+      margin: 3rem 0 0 0;
+      padding: 0 4rem;
+      @include easeOut;
+      transform: translate3d(-100%, 0, 0);
+
+      span {
+        color: $accent-color;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    }
+    &.load {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    &.role {
+      margin: 1rem 0 1rem 0;
+      padding: 0 4rem;
+      @include easeOut;
+      transform: translate3d(-100%, 0, 0);
+
+      span {
+        color: $accent-color;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    }
+    &.load {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .icons {
+    font-size: 3rem;
+    padding: 0 4rem;
+    @include easeOut;
+    transform: translate3d(-100%, 0, 0);
+
+    div {
+      display: inline-block;
+
+      span {
+        &:hover {
+          color: darken($accent-color, 10);
+          @include easeOut;
+        }
+      }
+    }
+    &.load {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@for $x from 2 through 4 {
+  .index > :nth-child(#{$x}) {
+    transition-delay: $x * 0.2s;
+  }
+}
