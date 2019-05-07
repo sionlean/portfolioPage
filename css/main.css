@@ -86,7 +86,7 @@ html {
   width: 100%; }
 
 body {
-  background: url(../../img/background.jpg);
+  background: url(../img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -390,49 +390,48 @@ main {
   opacity: 1; }
 
 @media screen and (max-width: 480px) {
-  body {
-    width: 100vw;
-    height: 100vh; }
-    body .logo > img {
+  body.home {
+    overflow: hidden !important; }
+    body.home .logo > img {
       height: 4rem;
       width: 4rem; }
-    body header #menuBtn {
+    body.home header #menuBtn {
       right: 0;
       left: 0; }
-    body header #menu {
+    body.home header #menu {
       z-index: 1;
       width: 100%;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       background-color: rgba(81, 81, 81, 0.95); }
-      body header #menu ul li {
+      body.home header #menu ul li {
         padding: 1rem; }
-        body header #menu ul li .current > a {
+        body.home header #menu ul li .current > a {
           color: #d4ebf2; }
-        body header #menu ul li div a {
+        body.home header #menu ul li div a {
           font-size: 1rem; }
-    body main.index {
+    body.home main.index {
       align-items: center; }
-    body main .title {
+    body.home main .title {
       margin: 0;
       padding: 0;
       margin-bottom: 3rem;
       font-size: 2.5rem; }
-    body main h2.name {
+    body.home main h2.name {
       margin: 0;
       padding: 0;
       margin-top: 4rem;
       font-size: 2rem; }
-    body main h3.role {
+    body.home main h3.role {
       margin: 0;
       padding: 0;
       margin: 1rem 0;
       text-align: center;
       font-size: 1.2rem; }
-    body main div.icons {
+    body.home main div.icons {
       font-size: 1.5rem; }
-    body main .contactInfo {
+    body.home main .contactInfo {
       transform: translate3d(-200%, 0, 0);
       padding: 1rem;
       font-size: 0.7rem; }
-      body main .contactInfo.show {
+      body.home main .contactInfo.show {
         transform: translate3d(-50%, 0, 0); } }

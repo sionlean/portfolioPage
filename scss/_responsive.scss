@@ -1,8 +1,7 @@
 //Small phones
 @include sm {
-  body {
-    width: 100vw;
-    height: 100vh;
+  body.home {
+    overflow: hidden !important;
     .logo > img {
       height: 4rem;
       width: 4rem;
