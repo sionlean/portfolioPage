@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Raleway:200,400,700");
 .menuBtn {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 2rem;
   cursor: pointer;
@@ -96,6 +96,7 @@ body {
   body:after {
     content: "";
     background-color: #444;
+    background-size: cover;
     position: absolute;
     top: 0;
     width: 100%;
@@ -391,13 +392,13 @@ main {
 
 @media screen and (max-width: 480px) {
   body.home {
-    overflow: hidden !important; }
+    position: fixed; }
     body.home .logo > img {
       height: 4rem;
       width: 4rem; }
     body.home header #menuBtn {
-      right: 0;
-      left: 0; }
+      right: 0.1rem;
+      top: 0.1rem; }
     body.home header #menu {
       z-index: 1;
       width: 100%;
@@ -431,7 +432,7 @@ main {
       font-size: 1.5rem; }
     body.home main .contactInfo {
       transform: translate3d(-200%, 0, 0);
-      padding: 1rem;
+      padding: 1rem 1rem 1rem 1.2rem;
       font-size: 0.7rem; }
       body.home main .contactInfo.show {
-        transform: translate3d(-50%, 0, 0); } }
+        transform: translate3d(-55%, 0, 0); } }

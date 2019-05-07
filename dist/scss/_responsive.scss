@@ -1,7 +1,7 @@
 //Small phones
 @include sm {
   body.home {
-    overflow: hidden !important;
+    position: fixed;
     .logo > img {
       height: 4rem;
       width: 4rem;
@@ -9,8 +9,8 @@
 
     header {
       #menuBtn {
-        right: 0;
-        left: 0;
+        right: 0.1rem;
+        top: 0.1rem;
       }
 
       #menu {
@@ -18,6 +18,7 @@
         width: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         background-color: rgba(lighten($secondary-color, 5), 0.95);
+
         ul {
           li {
             padding: 1rem;
@@ -64,11 +65,11 @@
 
       .contactInfo {
         transform: translate3d(-200%, 0, 0);
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 1.2rem;
         font-size: 0.7rem;
 
         &.show {
-          transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-55%, 0, 0);
         }
       }
     }
