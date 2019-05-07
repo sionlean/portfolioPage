@@ -45,7 +45,7 @@ body {
 }
 
 main {
-  height: calc(100% - 2rem);
+  min-height: calc(100vh - 2rem);
   width: 100%;
   &.index {
     @include flexColCtr;
@@ -106,9 +106,10 @@ main {
 
     &.subTitle {
       color: $accent-color;
-      position: absolute;
-      bottom: 30rem;
-      left: 44vw;
+      display: flex;
+      min-height: 50vh;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -328,6 +329,7 @@ main {
   .techSkills {
     grid-area: techSkills;
     font-size: 2rem;
+    margin-bottom: 2rem;
 
     div {
       padding: 1rem;
