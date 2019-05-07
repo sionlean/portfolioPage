@@ -28,12 +28,12 @@
           li {
             padding: 1rem;
             .current > a {
-              color: lighten($accent-color, 10);
+              color: $accent-color;
             }
 
             div {
               a {
-                font-size: 1rem;
+                font-size: 2rem;
               }
             }
           }
@@ -48,6 +48,15 @@
 
       &.page {
         width: 90%;
+
+        .resumeDl {
+          font-size: 2rem;
+          margin-left: 1rem;
+
+          span {
+            color: $accent-color;
+          }
+        }
       }
       h1 {
         font-size: 2.5rem;
@@ -125,7 +134,7 @@
     .experience,
     .courses,
     .techSkills {
-      padding: 0px;
+      padding: 0.5rem;
       font-size: 1rem;
       line-height: 1.5rem;
 
@@ -157,6 +166,86 @@
 
 //Phones
 @include md {
+  body {
+    header > #menu > ul > li > div > a {
+      font-size: 3.5rem;
+    }
+    main {
+      &.page > .resumeDl span {
+        font-size: 3.5rem;
+        margin-left: 2.5rem;
+      }
+      h1 {
+        &.title {
+          font-size: 5rem;
+        }
+
+        &.projectTitle {
+          font-size: 5rem;
+        }
+
+        &.resumeTitle {
+          font-size: 5rem;
+        }
+      }
+
+      h2 {
+        &.name {
+          font-size: 3.5rem;
+        }
+
+        &.subTitle {
+          font-size: 2.6rem;
+        }
+      }
+
+      h3 {
+        &.role {
+          font-size: 1.5rem;
+        }
+      }
+
+      div.icons {
+        font-size: 2.5rem;
+      }
+
+      .contactInfo {
+        transform: translate3d(-300%, 0, 0);
+        padding: 1rem 1rem 1rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 50px;
+        text-align: center;
+
+        &.show {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      .projectInfo {
+        margin-top: -0.17rem;
+      }
+    }
+  }
+
+  .resumeCon {
+    .info,
+    .education,
+    .experience,
+    .courses,
+    .techSkills {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+      .techIcon {
+        span {
+          font-size: 2.3rem;
+        }
+      }
+    }
+  }
 }
 
 //Tablets

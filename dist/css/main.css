@@ -97,7 +97,7 @@ body {
     content: "";
     background-color: #444;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
@@ -129,8 +129,14 @@ main {
     align-items: flex-start; }
   main.page {
     margin: auto;
-    text-align: center;
-    width: 75%; }
+    text-align: start;
+    width: 85%; }
+    main.page .resumeDl {
+      font-size: 4rem;
+      margin-left: 3rem;
+      display: inline-block; }
+      main.page .resumeDl span:hover {
+        color: lightblue; }
   main h1 {
     font-size: 6rem;
     font-weight: 200;
@@ -146,6 +152,8 @@ main {
       margin: 3rem 0;
       padding: 0 4rem;
       color: lightblue; }
+    main h1.resumeTitle {
+      display: inline-block; }
   main h2 {
     font-size: 3rem;
     font-weight: 500; }
@@ -392,7 +400,7 @@ main {
   padding-top: 0.5rem;
   opacity: 1; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   body {
     position: fixed; }
     body .scroll {
@@ -412,13 +420,18 @@ main {
       body header #menu ul li {
         padding: 1rem; }
         body header #menu ul li .current > a {
-          color: #d4ebf2; }
+          color: lightblue; }
         body header #menu ul li div a {
-          font-size: 1rem; }
+          font-size: 2rem; }
     body main.index {
       align-items: center; }
     body main.page {
       width: 90%; }
+      body main.page .resumeDl {
+        font-size: 2rem;
+        margin-left: 1rem; }
+        body main.page .resumeDl span {
+          color: lightblue; }
     body main h1 {
       font-size: 2.5rem;
       text-align: center; }
@@ -466,7 +479,7 @@ main {
     .resumeCon .experience,
     .resumeCon .courses,
     .resumeCon .techSkills {
-      padding: 0px;
+      padding: 0.5rem;
       font-size: 1rem;
       line-height: 1.5rem; }
       .resumeCon .info h3,
@@ -507,3 +520,53 @@ main {
         .resumeCon .courses .techIcon span,
         .resumeCon .techSkills .techIcon span {
           font-size: 1.9rem; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body header > #menu > ul > li > div > a {
+    font-size: 3.5rem; }
+  body main.page > .resumeDl span {
+    font-size: 3.5rem;
+    margin-left: 2.5rem; }
+  body main h1.title {
+    font-size: 5rem; }
+  body main h1.projectTitle {
+    font-size: 5rem; }
+  body main h1.resumeTitle {
+    font-size: 5rem; }
+  body main h2.name {
+    font-size: 3.5rem; }
+  body main h2.subTitle {
+    font-size: 2.6rem; }
+  body main h3.role {
+    font-size: 1.5rem; }
+  body main div.icons {
+    font-size: 2.5rem; }
+  body main .contactInfo {
+    transform: translate3d(-300%, 0, 0);
+    padding: 1rem 1rem 1rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    text-align: center; }
+    body main .contactInfo.show {
+      transform: translate3d(0, 0, 0); }
+  body main .projectInfo {
+    margin-top: -0.17rem; }
+  .resumeCon .info,
+  .resumeCon .education,
+  .resumeCon .experience,
+  .resumeCon .courses,
+  .resumeCon .techSkills {
+    padding: 1rem; }
+    .resumeCon .info h3,
+    .resumeCon .education h3,
+    .resumeCon .experience h3,
+    .resumeCon .courses h3,
+    .resumeCon .techSkills h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem; }
+    .resumeCon .info .techIcon span,
+    .resumeCon .education .techIcon span,
+    .resumeCon .experience .techIcon span,
+    .resumeCon .courses .techIcon span,
+    .resumeCon .techSkills .techIcon span {
+      font-size: 2.3rem; } }

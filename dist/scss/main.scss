@@ -54,8 +54,17 @@ main {
 
   &.page {
     margin: auto;
-    text-align: center;
-    width: 75%;
+    text-align: start;
+    width: 85%;
+
+    .resumeDl {
+      font-size: 4rem;
+      margin-left: 3rem;
+      display: inline-block;
+      span:hover {
+        color: $accent-color;
+      }
+    }
   }
 
   h1 {
@@ -78,6 +87,10 @@ main {
       margin: 3rem 0;
       padding: 0 4rem;
       color: $accent-color;
+    }
+
+    &.resumeTitle {
+      display: inline-block;
     }
   }
 

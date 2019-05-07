@@ -16,7 +16,7 @@ $background-opacity: 0.6;
     content: "";
     background-color: $secondary-color;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
@@ -54,7 +54,7 @@ $background-opacity: 0.6;
 //Responsive mixin
 
 @mixin sm {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
@@ -65,7 +65,7 @@ $background-opacity: 0.6;
   }
 }
 @mixin lg {
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 769px) {
     @content;
   }
 }
