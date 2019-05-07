@@ -25,6 +25,10 @@ function show() {
 
 //Onload homepage animation
 window.onload = function() {
+  //Fading when load body
+  const bdyFade = document.getElementsByTagName("body");
+  bdyFade[0].classList.add("fade");
+
   const name = document.getElementsByClassName("name");
   const role = document.getElementsByClassName("role");
   const icons = document.getElementsByClassName("icons");

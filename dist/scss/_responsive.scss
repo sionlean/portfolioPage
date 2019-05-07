@@ -1,0 +1,89 @@
+//Small phones
+@include sm {
+  body {
+    width: 100vw;
+    height: 100vh;
+    .logo > img {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    header {
+      #menuBtn {
+        right: 0;
+        left: 0;
+      }
+
+      #menu {
+        z-index: 1;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: rgba(lighten($secondary-color, 5), 0.95);
+        ul {
+          li {
+            padding: 1rem;
+            .current > a {
+              color: lighten($accent-color, 10);
+            }
+
+            div {
+              a {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    main {
+      &.index {
+        align-items: center;
+      }
+
+      .title {
+        @include reset;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+      }
+
+      h2.name {
+        @include reset;
+        margin-top: 4rem;
+        font-size: 2rem;
+      }
+
+      h3.role {
+        @include reset;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+
+      div.icons {
+        font-size: 1.5rem;
+      }
+
+      .contactInfo {
+        transform: translate3d(-200%, 0, 0);
+        padding: 1rem;
+        font-size: 0.7rem;
+
+        &.show {
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+//Phones
+@include md {
+}
+
+//Tablets
+@include lg {
+}
+
+//Laptops or Computer
+@include xl {
+}

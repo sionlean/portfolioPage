@@ -15,6 +15,7 @@ $background-opacity: 0.6;
   &:after {
     content: "";
     background-color: $secondary-color;
+    // background-size: cover;
     position: absolute;
     top: 0;
     width: 100%;
@@ -40,11 +41,41 @@ $background-opacity: 0.6;
   justify-content: center;
 }
 
+//Reset margin, padding for responsive
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
 //Set text color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
     @return #000;
   } @else {
     @return $primary-color;
+  }
+}
+
+//Responsive mixin
+
+@mixin sm {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (min-width: 1024px) {
+    @content;
   }
 }
