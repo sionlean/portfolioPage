@@ -524,9 +524,8 @@ main {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   body header > #menu > ul > li > div > a {
     font-size: 3.5rem; }
-  body main.page > .resumeDl span {
-    font-size: 3.5rem;
-    margin-left: 2.5rem; }
+  body.res main.page {
+    width: 90%; }
   body main h1.title {
     font-size: 5rem; }
   body main h1.projectTitle {
@@ -570,3 +569,47 @@ main {
     .resumeCon .courses .techIcon span,
     .resumeCon .techSkills .techIcon span {
       font-size: 2.3rem; } }
+
+@media screen and (min-width: 769px) {
+  body {
+    position: fixed; }
+    body .scroll {
+      overflow-y: scroll;
+      height: 100%; }
+    body .logo {
+      position: relative; }
+    body header > #menu {
+      width: 40%;
+      z-index: 1; }
+      body header > #menu ul > li > div > a {
+        font-size: 2.5rem; }
+    body main.page > .resumeDl span {
+      font-size: 4.5rem;
+      margin-left: 2.5rem;
+      color: lightblue; }
+    body main h1.title {
+      font-size: 6.5rem; }
+    body main h1.projectTitle {
+      padding: 0;
+      font-size: 6.5rem; }
+    body main h1.resumeTitle {
+      font-size: 6.5rem;
+      padding: 0; }
+    body main h2.name {
+      font-size: 4.5rem; }
+    body main h2.subTitle {
+      font-size: 3.5rem; }
+    body main h3.role {
+      font-size: 2rem; }
+    body main div.icons {
+      font-size: 3rem; }
+  .projectContainer {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2rem; }
+    .projectContainer .projectItems img {
+      border: 4px solid lightblue; }
+    .projectContainer .projectItems .projectInfo {
+      text-align: center; }
+    .projectContainer .resumeCon {
+      padding-top: 2rem;
+      grid-gap: 2rem; } }
