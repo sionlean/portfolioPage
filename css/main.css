@@ -400,7 +400,7 @@ main {
   padding-top: 0.5rem;
   opacity: 1; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 870px) {
   body {
     position: fixed; }
     body .scroll {
@@ -410,8 +410,8 @@ main {
       height: 4rem;
       width: 4rem; }
     body header #menuBtn {
-      right: 0.1rem;
-      top: 0.1rem; }
+      right: 1.5rem;
+      top: 0.5rem; }
     body header #menu {
       z-index: 1;
       width: 100%;
@@ -521,11 +521,12 @@ main {
         .resumeCon .techSkills .techIcon span {
           font-size: 1.9rem; } }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 870px) {
   body header > #menu > ul > li > div > a {
     font-size: 3.5rem; }
-  body.res main.page {
-    width: 90%; }
+  body main.page > .resumeDl span {
+    font-size: 3.5rem;
+    margin-left: 2.5rem; }
   body main h1.title {
     font-size: 5rem; }
   body main h1.projectTitle {
@@ -570,7 +571,7 @@ main {
     .resumeCon .techSkills .techIcon span {
       font-size: 2.3rem; } }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 871px) and (max-width: 2000px) {
   body {
     position: fixed; }
     body .scroll {
@@ -583,10 +584,12 @@ main {
       z-index: 1; }
       body header > #menu ul > li > div > a {
         font-size: 2.5rem; }
-    body main.page > .resumeDl span {
-      font-size: 4.5rem;
-      margin-left: 2.5rem;
-      color: lightblue; }
+    body main.page {
+      width: 85%; }
+      body main.page .resumeDl span {
+        font-size: 4.5rem;
+        margin-left: 2.5rem;
+        color: lightblue; }
     body main h1.title {
       font-size: 6.5rem; }
     body main h1.projectTitle {
@@ -610,6 +613,10 @@ main {
       border: 4px solid lightblue; }
     .projectContainer .projectItems .projectInfo {
       text-align: center; }
-    .projectContainer .resumeCon {
-      padding-top: 2rem;
-      grid-gap: 2rem; } }
+  .resumeCon {
+    grid-template-columns: 1fr;
+    grid-template-areas: "info" "education" "experience" "courses" "techSkills";
+    grid-template-rows: 1fr;
+    margin: auto;
+    padding-top: 2rem;
+    grid-gap: 1rem; } }
