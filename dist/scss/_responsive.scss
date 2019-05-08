@@ -14,8 +14,8 @@
     }
     header {
       #menuBtn {
-        right: 0.1rem;
-        top: 0.1rem;
+        right: 1.5rem;
+        top: 0.5rem;
       }
 
       #menu {
@@ -170,15 +170,11 @@
     header > #menu > ul > li > div > a {
       font-size: 3.5rem;
     }
-
-    &.res {
-      main {
-        &.page {
-          width: 90%;
-        }
-      }
-    }
     main {
+      &.page > .resumeDl span {
+        font-size: 3.5rem;
+        margin-left: 2.5rem;
+      }
       h1 {
         &.title {
           font-size: 5rem;
@@ -274,10 +270,13 @@
     }
 
     main {
-      &.page > .resumeDl span {
-        font-size: 4.5rem;
-        margin-left: 2.5rem;
-        color: $accent-color;
+      &.page {
+        width: 85%;
+        .resumeDl span {
+          font-size: 4.5rem;
+          margin-left: 2.5rem;
+          color: $accent-color;
+        }
       }
       h1 {
         &.title {
@@ -330,11 +329,15 @@
         text-align: center;
       }
     }
+  }
 
-    .resumeCon {
-      padding-top: 2rem;
-      grid-gap: 2rem;
-    }
+  .resumeCon {
+    grid-template-columns: 1fr;
+    grid-template-areas: "info" "education" "experience" "courses" "techSkills";
+    grid-template-rows: 1fr;
+    margin: auto;
+    padding-top: 2rem;
+    grid-gap: 1rem;
   }
 }
 

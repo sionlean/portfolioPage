@@ -54,23 +54,23 @@ $background-opacity: 0.6;
 //Responsive mixin
 
 @mixin sm {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     @content;
   }
 }
 
 @mixin md {
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 870px) {
     @content;
   }
 }
 @mixin lg {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 871px) and (max-width: 2000px) {
     @content;
   }
 }
 @mixin xl {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 2001px) {
     @content;
   }
 }
