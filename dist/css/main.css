@@ -79,7 +79,8 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  color: #fff; }
+  color: #fff;
+  -webkit-overflow-scrolling: touch; }
 
 html {
   height: 100%;
