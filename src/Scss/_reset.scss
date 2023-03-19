@@ -1,0 +1,141 @@
+// Box sizing
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Reset margin and padding
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+// Set default font family and size
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+// Remove list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Reset anchor tags
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Set base styles for headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+// Set base styles for paragraphs
+p {
+  margin-bottom: 1rem;
+}
+
+// Set base styles for images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Set base styles for form elements
+input,
+textarea,
+select,
+button {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Set base styles for buttons
+button {
+  cursor: pointer;
+}
