@@ -3,9 +3,9 @@ import { defineConfig } from "vite";
 
 const config = {
   plugins: [react()],
-  root: "src/Main/",
+  root: "src",
   build: {
-    outDir: "../../dist", // Specify your output build folder here
+    outDir: "../dist", // Specify your output build folder here
     emptyOutDir: true,
   },
   jsx: { inject: true },

@@ -12,7 +12,7 @@ const AppRoutes = () => {
           path={ROUTES_APP.V1}
           element={
             <iframe
-              src="../V1/index.html"
+              src="../v1/index.html"
               style={{ border: "none", width: "100%", height: "100vh" }}
             />
           }
