@@ -1,8 +1,11 @@
 // External Moduels
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+// Local Modules
+import Main from "./Main";
+
 // Constants
-import { ROUTES_APP } from "../Components/Constants";
+import { ROUTES_APP } from "../Constants/Constants";
 
 const AppRoutes = () => {
   return (
@@ -18,7 +21,7 @@ const AppRoutes = () => {
           }
         />
 
-        <Route path={ROUTES_APP.MAIN} element={<div>Main</div>} />
+        <Route path={ROUTES_APP.MAIN} element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
