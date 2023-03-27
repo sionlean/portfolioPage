@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./Main";
 
 // Constants
-import { ROUTES_APP } from "../Constants/Constants";
+import { ROUTES_APP } from "../../Constants/Constants";
 
 const AppRoutes = () => {
   return (

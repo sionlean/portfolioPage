@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 // Local Modules
 import AppRoutes from "./Routes";
-import "../Scss/main.scss";
+import "../../Scss/main.scss";
 
 const App = (): JSX.Element => {
   return <AppRoutes />;

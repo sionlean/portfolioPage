@@ -1,5 +1,12 @@
 @import "reset";
+@import "tailwindcss/base"; // Import the base Tailwind CSS styles
+@import "tailwindcss/components"; // Import the component styles (optional)
+@import "tailwindcss/utilities"; // Import the utility styles
 
-.main {
+html,
+body,
+#root {
   display: block;
+  width: 100%;
+  height: 100%;
 }
